@@ -8,6 +8,14 @@ const kTitlePrimary = TextStyle(
   height: 1,
 );
 
+const kTitlePrimaryWhite = TextStyle(
+  color: Colors.white,
+  fontSize: 26,
+  fontWeight: FontWeight.w700,
+  fontFamily: 'Barlow',
+  height: 1,
+);
+
 const kTitleSecondary = TextStyle(
   color: Colors.black,
   fontSize: 18,
@@ -47,3 +55,14 @@ const kSubtitleHome = TextStyle(
   fontWeight: FontWeight.w400,
   height: 1,
 );
+
+const kHintStyleText = TextStyle(
+  fontFamily: 'Barlow',
+  fontSize: 14,
+  fontWeight: FontWeight.w400,
+  color: Color(0xFFC4C4C4),
+);
+
+const kPrimaryColor = Color(0xFFf8bc24);
+
+const kBackGroundColorSecundary = Color(0xFFF5F5F5);

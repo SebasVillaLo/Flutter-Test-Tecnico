@@ -10,7 +10,7 @@ class FirebaseConection {
       String departamento,
       String ciudad) async {
     try {
-      await collectionReference.add({
+      await userRegisterCollection.add({
         'name': nombreCompleto,
         'email': email,
         'direccion': direccion,

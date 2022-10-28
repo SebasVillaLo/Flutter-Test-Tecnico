@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:prueba_tecnica/Components/CardCategories.dart';
+import 'package:prueba_tecnica/Components/NavBar/Navbar.dart';
+import 'package:prueba_tecnica/Components/TabBar/TabBar.dart';
 import 'package:prueba_tecnica/constants.dart';
 
 class HomePage extends StatefulWidget {
@@ -96,15 +98,33 @@ class _HomePageState extends State<HomePage> {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const [
+                children: [
                   CardCategories(
                     image: 'assets/Icon/escabadora.png',
                     title: 'Maquinas',
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => const Tabbar(
+                            initialTab: 0,
+                          ),
+                        ),
+                      );
+                    },
                   ),
                   CardCategories(
                     image: 'assets/Icon/camion.png',
                     title: 'Transportadores',
                     widthImage: 117,
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => const Tabbar(
+                            initialTab: 1,
+                          ),
+                        ),
+                      );
+                    },
                   ),
                 ],
               ),
@@ -113,14 +133,16 @@ class _HomePageState extends State<HomePage> {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const [
+                children: [
                   CardCategories(
                     image: 'assets/Icon/herramienta.png',
                     title: 'Repuestos',
+                    onTap: () {},
                   ),
                   CardCategories(
                     image: 'assets/Icon/constructor.png',
                     title: 'Operadores',
+                    onTap: () {},
                   ),
                 ],
               )
@@ -128,6 +150,8 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
+      // create a navigatio bar at the bottom of the screen with 4 icons
+      bottomNavigationBar: const NavBar(),
     );
   }
 }
